@@ -1,0 +1,227 @@
+:root{
+/* Primary */
+--Lightred: hsla(0, 89%, 75%, 0.342);
+--Orangeyyellow: hsla(39, 73%, 78%, 0.623);
+--Greenteal: hsla(166, 89%, 82%, 0.589);
+--Cobaltblue: hsla(234, 85%, 63%, 0.527);
+
+/* Gradients */
+--Lightslateblue : hsl(252, 100%, 67%);
+--Lightroyalblue : hsl(241, 81%, 54%);
+
+--Violetblue : hsla(256, 72%, 46%, 1);
+--Persianblue : hsla(241, 72%, 46%, 0);
+
+/* Neutral */
+--White: hsl(0, 7%, 97%);
+--Paleblue: hsl(221, 100%, 96%);
+--Lightlavender: hsl(241, 100%, 89%);
+--Darkgrayblue: hsl(224, 30%, 27%);
+
+}
+
+body{
+    margin: 0 45px;
+    background-color: var(--Paleblue);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ /* grid style */
+.grid{
+    display: grid;
+    grid-template-columns: "one" "two"  ;
+} 
+.grid> .card:nth-child(1){
+    grid-area: one;
+    background-color: var(--Lightroyalblue);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+     margin-right: 0;
+     position: relative;
+     left: 24%;
+     z-index: 1;
+    border-radius: 20px;
+
+}
+.grid> .card:nth-child(2){
+    grid-area: two;
+    background-color: var(--White);
+    margin-top: 40px;
+    margin-left: 0;
+    position: absolute;
+    left: 50%;
+    padding: 20px 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius:20px ;
+}
+/* summary card */
+.reaction{
+    display: inline-flex;
+    position: relative;
+    background-color: var(--Lightred);
+    border-radius: 10px;
+}
+#r{
+    position: absolute;
+    bottom: 28%;
+    left: 2%;
+}
+#rect{
+    padding-left: 35px;
+}
+.memory{
+    display: inline-flex;
+    position: relative;
+    background-color: var(--Orangeyyellow);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+#m{
+    position: absolute;
+    top: 28%;
+    left: 2%;
+}
+#memo{
+    padding-left: 35px;
+}
+
+.verbal{
+    display: inline-flex;
+    position: relative;
+    background-color: var(--Greenteal);
+    margin-top: 10px; 
+    border-radius: 10px ;
+}
+#ve{
+    position: absolute;
+    top: 34%;
+    left: 2%;
+}
+#ver{
+    padding-left: 35px;
+}
+
+.visual{
+    display: inline-flex;
+    position: relative;
+    background-color: var(--Cobaltblue);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+#v{
+    position: absolute;
+    top: 30%; 
+    left: 2%;
+}
+#vis{
+    padding-left: 35px; 
+}
+.rest{
+    padding-left: 128px;
+}
+.rest1{
+    padding-left: 140px;
+}
+button{
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: var(--Darkgrayblue);
+}
+/* result card */
+   .result{
+     font-size: 280%;
+     font-weight:bolder;
+   }
+   .tx{
+    font-size: 100%;
+    font-weight: bold;
+   }
+   h4{
+    color: var(--Lightlavender);
+   }
+   h2{
+    color: var(--White);
+   }
+   #t{
+    color: var(--Lightlavender);
+    font-size: 97%;
+    margin-top: 10px;
+   }
+
+ /* card */
+ .card {
+    display: flex;
+    flex-direction:column;
+    /* margin: auto; */
+    margin: 10px;
+    padding: 10px ;
+    box-shadow: hsla(234, 12%, 34%, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+   /* Destop */
+   @media only screen and (width >= 1165px) {
+    .grid {
+      grid-template-areas: "one" "two" ;
+      display: flex;
+    }
+    .card{
+        width: 300px;
+        height: 450px;
+    }
+    
+  } 
+  /* mobile  */
+  @media (min-width:334px) and (max-width:700px) {
+     
+    .grid {
+        display: block;
+      }
+    .card {
+        width: 300px;
+        height: 450px;
+        /* flex-direction:column; */
+    
+        
+      }
+      
+      .grid> .card:nth-child(1){
+        grid-area: one;
+        /* background-color: var(--Lightroyalblue); */
+        /* text-align: center; */
+        padding: 20px;
+        margin-top: 40px;
+         margin-right: 0;
+         position: relative;
+         z-index: 1;
+        border-radius: 20px;
+    
+    }
+    
+    .grid> .card:nth-child(2){
+        grid-area: two;
+        /* background-color: var(--White); */
+        margin-top: 40px;
+        margin-bottom: 30px;
+        position: absolute;
+        top: 64%;
+        left: 34%;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        /* border-bottom-right-radius:20px ; */
+    }
+
+}
+
+.attribution{
+    position: absolute;
+    top: 145%;
+    left: 50%;
+}
+  
