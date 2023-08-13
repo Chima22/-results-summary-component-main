@@ -187,14 +187,14 @@
         .grid> .card:nth-child(1){
             padding: 20px;
             margin-top: 30px;
-             margin-left: 10px;
+             margin-left: -15px;
              position: relative;
              z-index:1;
         
         }
         .grid> .card:nth-child(2){
             margin-top: -27px;
-            margin-left: 10px;
+            margin-left: -15px;
             padding: 20px 20px;
             margin-bottom: 20px;
             border-top-right-radius: 0 ;
