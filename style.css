@@ -176,12 +176,15 @@
       } 
       /* mobile  */
       @media (min-width:334px) and (max-width:700px) {
-         .grid{
+          body{
+            margin: 0 20px;
+         }
+          .grid{
             display: block;
          }
          .card{
             margin:auto;
-            width: 328px;
+            width: 300px;
             height: 450px;
         }
         .grid> .card:nth-child(1){
